@@ -29,7 +29,7 @@ class Request {
 
     public function getController() {
         $controller = ucfirst($this->controller);
-        return "App\Http\Controllers\\{$controller}Controler";
+        return "App\Http\Controllers\\{$controller}Controller";
     }
 
     public function getMethod() {
