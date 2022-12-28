@@ -8,12 +8,11 @@ class Request {
     protected $controller;
     protected $method;
 
-    public function __constructor() {
-
-        $this->segments = explode('/', $_SERVER["REQUEST_URI"]);
-        var_dump($_SERVER["REQUEST_URI"]);
-//        $this->setController();
-//        $this->setMethod();
+    public function __construct() {
+        $requestURI         = str_replace("/proyectos/FrameworkIntroduction/public", '', $_SERVER["REQUEST_URI"]);
+        $this->segments = explode('/', $requestURI);
+        $this->setController();
+        $this->setMethod();
     }
 
     public function setController() {
@@ -23,14 +22,14 @@ class Request {
     }
 
     public function setMethod() {
-        $this->controller = empty($this->segments[2]) 
+        $this->method = empty($this->segments[2]) 
                 ? 'index' 
                 : $this->segments[2];
     }
 
     public function getController() {
         $controller = ucfirst($this->controller);
-        return "App\Http\Controllers\{$controller}Controler";
+        return "App\Http\Controllers\\{$controller}Controler";
     }
 
     public function getMethod() {
@@ -41,12 +40,12 @@ class Request {
         $controller = $this->getController();
         $method     = $this->getMethod();
 
-//        $response = call_user_func([
-//            new $controller,
-//            $method
-//        ]);
-//        
-//        $response->send();
+        $response = call_user_func([
+            new $controller,
+            $method
+        ]);
+        
+        $response->send();
     }
 
 }
