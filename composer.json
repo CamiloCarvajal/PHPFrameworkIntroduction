@@ -1,0 +1,19 @@
+{
+    "name": "camil/framework-introduction",
+    "description": "Proyecto de PHP para crear la estructura basica de un proyecto",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files":[
+            "app/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Camilo Carvajal",
+            "email": "camilocc597@gmail.com"
+        }
+    ],
+    "require": {}
+}
