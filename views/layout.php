@@ -11,9 +11,9 @@
         <div class="container">
             <a href="/" class="navbar-brand h1">FW</a>
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-<!--                <li>second</li>
-                <li>third</li>-->
+                <li class="nav-item"><a href="/proyectos/FrameworkIntroduction/public/home/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/proyectos/FrameworkIntroduction/public/contacto/" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="/proyectos/FrameworkIntroduction/public/questions/" class="nav-link">Questions</a></li>
             </ul>
 
         </div>
