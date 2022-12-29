@@ -10,6 +10,12 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
         <div class="container">
             <a href="/" class="navbar-brand h1">FW</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+<!--                <li>second</li>
+                <li>third</li>-->
+            </ul>
+
         </div>
     </nav>
     
